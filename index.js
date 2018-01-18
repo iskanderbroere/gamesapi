@@ -13,7 +13,7 @@ const port = process.env.PORT || 3030
 const app = express()
 const server = http.Server(app)
 const io = socketIO(server)
-server.listen(3002)
+
 io.use(socketAuth)
 
 io.on('connect', socket => {
